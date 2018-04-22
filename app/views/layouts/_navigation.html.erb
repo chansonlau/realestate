@@ -19,7 +19,6 @@
 
         <!-- (1) HOME -->  
         <li><%= link_to "<span class='glyphicon glyphicon-home'></span>&nbsp; Home".html_safe, root_path %></li>
-          
           <!-- ORI Agency:1000, Premier:100, else:30 -->   
           <% if current_user %>
             <% if current_user.status == "Platinum" %>   <!--Agency-->
