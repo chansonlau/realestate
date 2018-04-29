@@ -245,45 +245,60 @@ function showSlides(n) {
   <%= "Furnishing:" %>&nbsp;
 </div>
 <div class='col-xs-9 gutter-0'>
-  <%= @article.furnishing %>&nbsp;
+  <% if @article.furnishing.present? %>
+    <%= @article.furnishing %>&nbsp;  
+  <% else %>
+    NIL
+  <% end %>
 </div>
 <div align="right" class='font-green col-xs-3 gutter-0'>
   <%= "Ceiling(m):" %>&nbsp;
 </div>
 <div class='col-xs-9 gutter-0'>
-  <%= number_with_precision(@article.ceiling, precision: 0, delimiter: ',') %>
+  <% if @article.ceiling.present? %>
+    <%= number_with_precision(@article.ceiling, precision: 0, delimiter: ',') %>  
+  <% else %>
+    NIL
+  <% end %>
 </div>
+
 <div align="right" class='font-green col-xs-3 gutter-0'>
   <%= "Zoning:" %>&nbsp;
 </div>
 <div class='col-xs-9 gutter-0'>
-  <%= @article.zoning %>&nbsp;
+  <% if @article.zoning.present? %>
+    <%= @article.zoning %>&nbsp;  
+  <% else %>
+    NIL
+  <% end %>
 </div>
 <div align="right" class='font-green col-xs-3 gutter-0'>
   <%= "Lot:" %>&nbsp;
 </div>
 <div class='col-xs-9 gutter-0'>
-  <%= @article.lot %>&nbsp;
+  <% if @article.lot.present? %>
+    <%= @article.lot %>&nbsp;  
+  <% else %>
+    NIL
+  <% end %>
 </div>
 
 <div align="right" class='font-green col-xs-3 gutter-0'>
-  <%= "Bathrooms:" %>&nbsp;
+  <%= "Other info:" %>&nbsp;
 </div>
 <div class='col-xs-9 gutter-0'>
-  <%= @article.bathroom %>&nbsp;
-</div>
-<div align="right" class='font-green col-xs-3 gutter-0'>
-  <%= "Other info:" %>&nbsp;
+  <%= @otherinfo.name if @otherinfo.present? %>&nbsp;   
 </div>
 
 <div align="right" class='font-green col-xs-3 gutter-0'>
   <%= "Title Type:" %>&nbsp;
 </div>
 <div class='col-xs-9 gutter-0'>
-  <%= @article.titletype %>&nbsp;
-</div>
-<div class='col-xs-9 gutter-0'>
-  <%= @otherinfo.name if @otherinfo.present? %>&nbsp;
+  <% if @article.titletype.present? %>
+    <%= @article.titletype %>&nbsp;  
+  <% else %>
+    NIL
+  <% end %>
 </div>
 <div align="right" class='font-green col-xs-3 gutter-0'>
   <%= "Price:" %>&nbsp;
