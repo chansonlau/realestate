@@ -1,0 +1,11 @@
+development:
+  free90: true
+  activ30: false
+
+test:
+  free90: true
+  activ30: false
+
+production:
+  free90: true
+  activ30: false
