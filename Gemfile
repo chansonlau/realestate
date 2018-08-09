@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,7 +46,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # 14/7/18 resolve security issue with traversal - upgrade from spr 3.5.2 to 3.7.2
 gem 'sprockets', '~>3.7.2'
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
